@@ -44,6 +44,7 @@
             this.MethodsList = new System.Windows.Forms.ComboBox();
             this.FunctionList = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.deviation = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -179,15 +180,24 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 196);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.Size = new System.Drawing.Size(75, 13);
             this.label8.TabIndex = 9;
-            this.label8.Text = "label8";
+            this.label8.Text = "Погрешность";
+            // 
+            // deviation
+            // 
+            this.deviation.Location = new System.Drawing.Point(125, 196);
+            this.deviation.Name = "deviation";
+            this.deviation.ReadOnly = true;
+            this.deviation.Size = new System.Drawing.Size(147, 20);
+            this.deviation.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 280);
+            this.Controls.Add(this.deviation);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.FunctionList);
             this.Controls.Add(this.MethodsList);
@@ -229,6 +239,7 @@
         private System.Windows.Forms.ComboBox MethodsList;
         private System.Windows.Forms.ComboBox FunctionList;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox deviation;
     }
 }
 

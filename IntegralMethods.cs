@@ -49,10 +49,18 @@ namespace Integral
             }
             return -sum * (b - a) / n;
         }
-        public static double Runge(double CurrentValue,double PreviousValue,int p)
+        public static double Runge(double CurrentValue,double PreviousValue,double p)
         {
             return -Math.Abs(CurrentValue-PreviousValue)/(Math.Pow(2,p)-1);
         }
+
+        public static Dictionary<string, double> RungePower = new Dictionary<string, double>
+        {
+            {"Simpson",4 },
+            {"Trapezoid", 2 },
+            {"Gauss", 2 },
+            {"MonteCarlo", Math.Sqrt(2) }
+        };
 
         public static Dictionary<string, Func<Func<double, double>, double, double, int, double>> MethodsDictionary = new Dictionary<string, Func<Func<double, double>, double, double, int, double>>
         {

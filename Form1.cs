@@ -32,6 +32,9 @@ namespace Integral
                 stopwatch.Stop();
                 IntegralResult.Text = result.ToString();
                 RequiredTime.Text = stopwatch.Elapsed.ToString();
+                double result2 = IntegralMethods.MethodsDictionary[SelectedMethod](FunctionsForIntegration.FunctionDictionary[SelectedFunction], leftborder, rightborder, Splits/2);
+                double Accuracy = IntegralMethods.Runge(result, result2, IntegralMethods.RungePower[SelectedMethod]);
+                deviation.Text = Accuracy.ToString();
             }
         }
     }

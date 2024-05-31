@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Integral
 {
-    static class IntegralMethods
+    public static class IntegralMethods
     {
         public static double Simpson(Func<double,double>f,double a, double b,int n)
         {
